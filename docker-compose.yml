@@ -39,7 +39,7 @@ services:
     restart: always
     command: sh -c "/entrypoint.sh db createdb && /entrypoint.sh db migrate && /entrypoint.sh run"
     ports:
-      - "0.0.0.0:8033:8000"
+      - "0.0.0.0:8035:8000"
     depends_on:
       plausible_db:
         condition: service_healthy
